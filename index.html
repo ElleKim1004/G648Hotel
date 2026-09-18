@@ -39,22 +39,27 @@ body{
 .wrap{max-width:52rem;margin:0 auto;padding:0 1.5rem}
 
 /* ---------- language switch ---------- */
-.util{background:var(--ink);color:var(--paper)}
+.util{background:var(--ink);color:var(--paper);padding:1rem 0 1.05rem}
 .util-in{
-  max-width:52rem;margin:0 auto;padding:.45rem 1.5rem;
-  display:flex;align-items:center;justify-content:flex-end;gap:.1rem;
+  max-width:52rem;margin:0 auto;padding:0 1.5rem;
+  display:flex;align-items:center;justify-content:center;
+  gap:.5rem;flex-wrap:wrap;
 }
 .util button{
-  font:inherit;font-size:.8rem;font-weight:400;
-  background:none;border:0;color:rgba(252,252,250,.55);
-  padding:.25rem .7rem;cursor:pointer;
-  border-bottom:2px solid transparent;
-  transition:color .15s,border-color .15s;
+  font:inherit;font-size:1rem;font-weight:500;
+  background:transparent;color:rgba(252,252,250,.62);
+  border:1px solid rgba(252,252,250,.24);border-radius:3px;
+  padding:.58rem 1.2rem;cursor:pointer;
+  transition:color .15s,border-color .15s,background .15s;
 }
-.util button:hover{color:rgba(252,252,250,.9)}
-.util button:focus-visible{outline:2px solid var(--brass);outline-offset:-2px}
+.util button:hover{color:#FCFCFA;border-color:rgba(252,252,250,.55)}
+.util button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 .util button[aria-pressed="true"]{
-  color:#FCFCFA;border-bottom-color:var(--brass);
+  background:var(--brass);border-color:var(--brass);color:#12151C;
+}
+@media (max-width:430px){
+  .util button{font-size:.92rem;padding:.5rem .78rem}
+  .util-in{gap:.38rem}
 }
 :root[data-theme="dark"] .util,
 :root:not([data-theme="light"]) .util{background:#0A0D14}
@@ -591,19 +596,19 @@ body.l-zh .Lp[data-l="zh"],body.l-ja .Lp[data-l="ja"]{display:block}
     <div class="answer">
       <div class="L" data-l="ko">
         <p>객실에 들어가 카드키를 홀더에 꽂고, 홀더 옆 <strong>QR 코드를 휴대폰 카메라로 스캔</strong>하면 자동으로 연결됩니다.</p>
-        <p>수동으로 연결하시려면 네트워크 <code>G648_5G</code> 또는 <code>G648_2.4G</code>, 비밀번호 <code>G648HOTEL</code>을 입력하세요.</p>
+        <p>수동으로 연결하시려면 객실 안내문에 적힌 네트워크 이름과 비밀번호를 입력하세요.</p>
       </div>
       <div class="L" data-l="en">
         <p>Insert the key card into the holder inside your room, then <strong>scan the QR code</strong> next to it with your phone camera. You'll connect automatically.</p>
-        <p>To connect manually, choose <code>G648_5G</code> or <code>G648_2.4G</code> and enter the password <code>G648HOTEL</code>.</p>
+        <p>To connect manually, the network name and password are printed on the notice in your room.</p>
       </div>
       <div class="L" data-l="zh">
         <p>进入客房后将房卡插入取电槽，再用手机相机<strong>扫描槽旁的二维码</strong>，即可自动连接。</p>
-        <p>如需手动连接，请选择网络 <code>G648_5G</code> 或 <code>G648_2.4G</code>，密码为 <code>G648HOTEL</code>。</p>
+        <p>如需手动连接，请参考客房内告示上标示的网络名称与密码。</p>
       </div>
       <div class="L" data-l="ja">
         <p>客室に入られましたらカードキーをホルダーに差し込み、その横の<strong>QRコードをスマートフォンのカメラで読み取って</strong>ください。自動的に接続されます。</p>
-        <p>手動で接続される場合は、ネットワーク <code>G648_5G</code> または <code>G648_2.4G</code>、パスワード <code>G648HOTEL</code> をご入力ください。</p>
+        <p>手動で接続される場合は、客室内のご案内に記載のネットワーク名とパスワードをご入力ください。</p>
       </div>
     </div>
   </details>

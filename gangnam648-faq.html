@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>강남648호텔 이용안내 · G648 Hotel Guest Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@350;400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#131C2E;
+  --ink-soft:#4E586B;
+  --brass:#A8823E;
+  --paper:#FCFCFA;
+  --panel:#FFFFFF;
+  --rule:#E3E2DC;
+  --rule-soft:#EFEEE9;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#EDEDE8; --ink-soft:#A2A9B6; --brass:#C9A45C;
+    --paper:#10141D; --panel:#171D28; --rule:#2A3140; --rule-soft:#222835;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#EDEDE8; --ink-soft:#A2A9B6; --brass:#C9A45C;
+  --paper:#10141D; --panel:#171D28; --rule:#2A3140; --rule-soft:#222835;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:6.5rem}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:'Noto Sans KR','Noto Sans JP','Noto Sans SC',system-ui,-apple-system,sans-serif;
+  font-weight:350; font-size:16px; line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:52rem;margin:0 auto;padding:0 1.5rem}
+
+/* ---------- language switch ---------- */
+.util{background:var(--ink);color:var(--paper);padding:1rem 0 1.05rem}
+.util-in{
+  max-width:52rem;margin:0 auto;padding:0 1.5rem;
+  display:flex;align-items:center;justify-content:center;
+  gap:.5rem;flex-wrap:wrap;
+}
+.util button{
+  font:inherit;font-size:1rem;font-weight:500;
+  background:transparent;color:rgba(252,252,250,.62);
+  border:1px solid rgba(252,252,250,.24);border-radius:3px;
+  padding:.58rem 1.2rem;cursor:pointer;
+  transition:color .15s,border-color .15s,background .15s;
+}
+.util button:hover{color:#FCFCFA;border-color:rgba(252,252,250,.55)}
+.util button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.util button[aria-pressed="true"]{
+  background:var(--brass);border-color:var(--brass);color:#12151C;
+}
+@media (max-width:430px){
+  .util button{font-size:.92rem;padding:.5rem .78rem}
+  .util-in{gap:.38rem}
+}
+:root[data-theme="dark"] .util,
+:root:not([data-theme="light"]) .util{background:#0A0D14}
+
+/* ---------- hero ---------- */
+.hero{border-bottom:1px solid var(--rule);padding:3.25rem 0 2.75rem}
+.mark{
+  font-family:'Noto Serif KR',Georgia,serif;
+  font-size:.82rem;letter-spacing:.22em;color:var(--brass);margin-bottom:1.5rem;
+}
+.hero h1{
+  font-family:'Noto Serif KR',Georgia,'Yu Mincho',serif;
+  font-weight:400;font-size:clamp(1.85rem,5.2vw,2.8rem);
+  line-height:1.34;letter-spacing:-.01em;max-width:24ch;
+}
+.hero h1 em{font-style:normal;color:var(--brass)}
+.hero p.sub{color:var(--ink-soft);margin-top:1.1rem;max-width:46ch}
+
+.keys{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));
+  gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:2.25rem;
+}
+.key{background:var(--panel);padding:1.1rem 1.25rem}
+.key dt{font-size:.78rem;color:var(--ink-soft);margin-bottom:.3rem}
+.key dd{font-family:'Noto Serif KR',Georgia,serif;font-size:1.15rem;font-weight:600}
+
+/* ---------- nav ---------- */
+.bar{
+  position:sticky;top:0;z-index:20;
+  background:color-mix(in srgb,var(--paper) 92%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);
+}
+.nav{
+  max-width:52rem;margin:0 auto;padding:.7rem 1.5rem;
+  display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none}
+.nav a{
+  flex:none;color:var(--ink-soft);text-decoration:none;font-size:.86rem;
+  padding:.3rem .65rem;border:1px solid transparent;border-radius:2px;
+  white-space:nowrap;transition:color .15s,border-color .15s;
+}
+.nav a:hover,.nav a:focus-visible{color:var(--ink);border-color:var(--rule)}
+
+/* ---------- sections ---------- */
+section{padding:3rem 0 .5rem}
+section h2{
+  font-family:'Noto Serif KR',Georgia,serif;font-weight:600;font-size:1.32rem;
+  padding-bottom:.7rem;border-bottom:2px solid var(--brass);
+  display:inline-block;margin-bottom:.4rem;
+}
+details{border-bottom:1px solid var(--rule-soft)}
+summary{
+  list-style:none;cursor:pointer;padding:1.05rem 2rem 1.05rem 0;
+  position:relative;font-weight:500;transition:color .15s;
+}
+summary::-webkit-details-marker{display:none}
+summary:hover{color:var(--brass)}
+summary:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+summary::after{
+  content:"";position:absolute;right:.4rem;top:1.6rem;
+  width:.55rem;height:.55rem;
+  border-right:1.5px solid var(--brass);border-bottom:1.5px solid var(--brass);
+  transform:rotate(45deg);transition:transform .2s ease;
+}
+details[open] summary::after{transform:rotate(225deg)}
+.answer{padding:0 0 1.3rem;color:var(--ink-soft);max-width:66ch}
+.answer p+p{margin-top:.7rem}
+.answer ul{margin:.6rem 0 0 1.05rem}
+.answer li{margin-bottom:.25rem}
+.answer strong{color:var(--ink);font-weight:500}
+.answer code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;
+  background:var(--rule-soft);padding:.12em .4em;border-radius:2px;color:var(--ink);
+}
+.steps{counter-reset:s;margin:.7rem 0 0;list-style:none}
+.steps li{counter-increment:s;position:relative;padding-left:1.7rem;margin-bottom:.45rem}
+.steps li::before{
+  content:counter(s);position:absolute;left:0;top:.05rem;
+  font-family:'Noto Serif KR',Georgia,serif;font-size:.85rem;color:var(--brass);
+}
+.note{
+  border-left:2px solid var(--brass);padding:.5rem 0 .5rem .9rem;
+  margin-top:.9rem;color:var(--ink);font-size:.93rem;
+}
+
+.contact{border:1px solid var(--rule);background:var(--panel);padding:1.6rem 1.5rem;margin-top:1.5rem}
+.contact h3{font-family:'Noto Serif KR',Georgia,serif;font-weight:600;font-size:1.05rem;margin-bottom:.9rem}
+.rows{display:grid;gap:.85rem}
+.row{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:baseline}
+.row b{font-weight:500;min-width:9rem}
+.row .Li{color:var(--ink-soft);font-size:.93rem}
+.row b .Li{color:var(--ink);font-size:1rem}
+
+footer{margin-top:3.5rem;padding:2rem 0 3rem;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.85rem}
+footer p+p{margin-top:.35rem}
+.review{
+  background:var(--panel);
+  border:1px solid var(--rule);
+  border-top:3px solid var(--brass);
+  padding:1.6rem 1.6rem 1.5rem;
+  margin:0 0 2rem;
+}
+.review .rv-label{
+  font-family:'Noto Serif KR',Georgia,serif;
+  font-size:.78rem;letter-spacing:.14em;
+  color:var(--brass);margin-bottom:.75rem;
+}
+.review .rv-lead{
+  font-family:'Noto Serif KR',Georgia,serif;
+  font-weight:600;font-size:1.12rem;line-height:1.62;
+  color:var(--ink);margin-bottom:.7rem;
+}
+.review .rv-body{
+  font-size:.95rem;line-height:1.75;color:var(--ink-soft);
+}
+.review .rv-body strong{color:var(--ink);font-weight:500}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition:none!important}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- language visibility ---------- */
+.L,.Li,.Lp{display:none}
+body.l-ko .L[data-l="ko"],body.l-en .L[data-l="en"],
+body.l-zh .L[data-l="zh"],body.l-ja .L[data-l="ja"]{display:block}
+body.l-ko .Li[data-l="ko"],body.l-en .Li[data-l="en"],
+body.l-zh .Li[data-l="zh"],body.l-ja .Li[data-l="ja"]{display:inline}
+body.l-ko .Lp[data-l="ko"],body.l-en .Lp[data-l="en"],
+body.l-zh .Lp[data-l="zh"],body.l-ja .Lp[data-l="ja"]{display:block}
+</style>
+</head>
+<body class="l-ko">
+
+<div class="util">
+  <div class="util-in" role="group" aria-label="Language">
+    <button type="button" data-lang="ko" aria-pressed="true" lang="ko">한국어</button>
+    <button type="button" data-lang="en" aria-pressed="false" lang="en">English</button>
+    <button type="button" data-lang="zh" aria-pressed="false" lang="zh">中文</button>
+    <button type="button" data-lang="ja" aria-pressed="false" lang="ja">日本語</button>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="mark">G648 HOTEL · GANGNAM</div>
+    <h1>
+      <span class="Li" data-l="ko">오후 4시 이후, <em>로비 키오스크</em>에서 객실 키를 받으시면 됩니다.</span>
+      <span class="Li" data-l="en">From 4 PM, collect your room key at the <em>lobby kiosk</em>.</span>
+      <span class="Li" data-l="zh">下午4点以后，请在<em>大堂自助机</em>领取客房钥匙。</span>
+      <span class="Li" data-l="ja">午後4時以降、<em>ロビーのキオスク</em>でルームキーをお受け取りください。</span>
+    </h1>
+    <p class="sub">
+      <span class="Li" data-l="ko">몇 시에 도착하셔도 추가 요금은 없습니다. 아래에서 숙박에 필요한 안내를 확인하세요.</span>
+      <span class="Li" data-l="en">No extra charge whatever time you arrive. Everything you need for your stay is below.</span>
+      <span class="Li" data-l="zh">无论何时抵达都不收取额外费用。住宿所需的信息请见以下内容。</span>
+      <span class="Li" data-l="ja">何時にご到着されても追加料金はかかりません。ご滞在に必要なご案内は以下をご覧ください。</span>
+    </p>
+    <dl class="keys">
+      <div class="key">
+        <dt>
+          <span class="Li" data-l="ko">체크인</span><span class="Li" data-l="en">Check-in</span>
+          <span class="Li" data-l="zh">入住</span><span class="Li" data-l="ja">チェックイン</span>
+        </dt>
+        <dd>
+          <span class="Li" data-l="ko">오후 4:00~</span><span class="Li" data-l="en">From 4:00 PM</span>
+          <span class="Li" data-l="zh">16:00 起</span><span class="Li" data-l="ja">16:00〜</span>
+        </dd>
+      </div>
+      <div class="key">
+        <dt>
+          <span class="Li" data-l="ko">체크아웃</span><span class="Li" data-l="en">Check-out</span>
+          <span class="Li" data-l="zh">退房</span><span class="Li" data-l="ja">チェックアウト</span>
+        </dt>
+        <dd>
+          <span class="Li" data-l="ko">오전 11:00</span><span class="Li" data-l="en">By 11:00 AM</span>
+          <span class="Li" data-l="zh">11:00 前</span><span class="Li" data-l="ja">11:00 まで</span>
+        </dd>
+      </div>
+      <div class="key">
+        <dt>
+          <span class="Li" data-l="ko">최대 인원</span><span class="Li" data-l="en">Occupancy</span>
+          <span class="Li" data-l="zh">入住人数</span><span class="Li" data-l="ja">定員</span>
+        </dt>
+        <dd>
+          <span class="Li" data-l="ko">2인</span><span class="Li" data-l="en">2 guests</span>
+          <span class="Li" data-l="zh">2人</span><span class="Li" data-l="ja">2名</span>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</header>
+
+<div class="bar">
+  <nav class="nav" aria-label="Contents">
+    <a href="#checkin">
+      <span class="Li" data-l="ko">체크인</span><span class="Li" data-l="en">Check-in</span>
+      <span class="Li" data-l="zh">入住</span><span class="Li" data-l="ja">チェックイン</span>
+    </a>
+    <a href="#access">
+      <span class="Li" data-l="ko">오시는 길</span><span class="Li" data-l="en">Getting here</span>
+      <span class="Li" data-l="zh">交通</span><span class="Li" data-l="ja">アクセス</span>
+    </a>
+    <a href="#room">
+      <span class="Li" data-l="ko">객실·시설</span><span class="Li" data-l="en">Room</span>
+      <span class="Li" data-l="zh">客房·设施</span><span class="Li" data-l="ja">客室·設備</span>
+    </a>
+    <a href="#parking">
+      <span class="Li" data-l="ko">주차·짐</span><span class="Li" data-l="en">Parking</span>
+      <span class="Li" data-l="zh">停车·行李</span><span class="Li" data-l="ja">駐車·荷物</span>
+    </a>
+    <a href="#food">
+      <span class="Li" data-l="ko">식사·배달</span><span class="Li" data-l="en">Food</span>
+      <span class="Li" data-l="zh">餐饮·外卖</span><span class="Li" data-l="ja">食事·デリバリー</span>
+    </a>
+    <a href="#rules">
+      <span class="Li" data-l="ko">이용 규칙</span><span class="Li" data-l="en">Rules</span>
+      <span class="Li" data-l="zh">住宿规定</span><span class="Li" data-l="ja">ご利用規則</span>
+    </a>
+    <a href="#contact">
+      <span class="Li" data-l="ko">문의</span><span class="Li" data-l="en">Contact</span>
+      <span class="Li" data-l="zh">联系</span><span class="Li" data-l="ja">お問い合わせ</span>
+    </a>
+  </nav>
+</div>
+
+<main class="wrap">
+
+<!-- ================= 체크인 ================= -->
+<section id="checkin">
+  <h2>
+    <span class="Li" data-l="ko">체크인 · 체크아웃</span><span class="Li" data-l="en">Check-in &amp; Check-out</span>
+    <span class="Li" data-l="zh">入住与退房</span><span class="Li" data-l="ja">チェックイン・チェックアウト</span>
+  </h2>
+
+  <details open>
+    <summary>
+      <span class="Li" data-l="ko">체크인은 어떻게 하나요?</span>
+      <span class="Li" data-l="en">How do I check in?</span>
+      <span class="Li" data-l="zh">如何办理入住？</span>
+      <span class="Li" data-l="ja">チェックインはどうすればよいですか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>오후 4시 이후 로비의 무인 키오스크에서 직접 키를 받으시면 됩니다. 오후 4시 이전에는 키오스크가 작동하지 않습니다.</p>
+        <ol class="steps">
+          <li>화면 하단에서 언어를 선택합니다 (한국어 · English · 中文 · 日本語)</li>
+          <li><strong>예약 확인</strong> 버튼을 누릅니다</li>
+          <li>예약자 성함 또는 예약번호를 입력합니다</li>
+          <li>객실 키가 발급됩니다</li>
+        </ol>
+        <div class="note">성함은 예약하신 플랫폼에 등록된 이름 그대로 입력해 주세요. 대소문자와 띄어쓰기까지 같아야 조회됩니다. 성함이 길면 이름(first name)만 넣으셔도 됩니다.</div>
+      </div>
+      <div class="L" data-l="en">
+        <p>From 4 PM, collect your key yourself at the kiosk in the lobby. The kiosk doesn't operate before 4 PM.</p>
+        <ol class="steps">
+          <li>Select your language at the bottom of the screen (한국어 · English · 中文 · 日本語)</li>
+          <li>Tap <strong>Check reservation</strong></li>
+          <li>Enter the booking name or reservation number</li>
+          <li>Your room key is issued</li>
+        </ol>
+        <div class="note">Enter the name exactly as it appears on your booking — capitalisation and spacing included. If your full name is long, your first name alone works.</div>
+      </div>
+      <div class="L" data-l="zh">
+        <p>下午4点以后，请在大堂的自助机自行领取钥匙。下午4点之前自助机不可使用。</p>
+        <ol class="steps">
+          <li>在屏幕下方选择语言（한국어 · English · 中文 · 日本語）</li>
+          <li>点击<strong>预订确认</strong></li>
+          <li>输入预订人姓名或预订编号</li>
+          <li>自助机将发放客房钥匙</li>
+        </ol>
+        <div class="note">姓名请与预订平台上登记的完全一致，包括大小写和空格。姓名较长时，仅输入名字（first name）即可。</div>
+      </div>
+      <div class="L" data-l="ja">
+        <p>午後4時以降、ロビーのキオスクでご自身でキーをお受け取りください。午後4時より前はキオスクをご利用いただけません。</p>
+        <ol class="steps">
+          <li>画面下部で言語を選択します（한국어 · English · 中文 · 日本語）</li>
+          <li><strong>予約確認</strong>ボタンを押します</li>
+          <li>予約者のお名前または予約番号を入力します</li>
+          <li>ルームキーが発行されます</li>
+        </ol>
+        <div class="note">お名前は予約サイトに登録されたとおりに入力してください。大文字・小文字やスペースまで一致する必要があります。お名前が長い場合はファーストネームのみでも検索できます。</div>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">밤늦게 도착하는데 괜찮을까요?</span>
+      <span class="Li" data-l="en">I'm arriving late at night. Is that a problem?</span>
+      <span class="Li" data-l="zh">深夜抵达可以吗？</span>
+      <span class="Li" data-l="ja">深夜の到着でも大丈夫ですか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>괜찮습니다. 키오스크는 밤새 열려 있고 <strong>심야 도착에 추가 요금을 받지 않습니다.</strong> 사전에 연락 주시지 않아도 바로 입실하실 수 있습니다.</p>
+        <p>혹시 조작이 어려우시면 야간 콜센터(오후 6시~다음날 오전 9시)로 연락하시면 실시간으로 도와드립니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>Not at all. The kiosk runs through the night and <strong>there's no late-arrival fee.</strong> You don't need to tell us in advance — just come in.</p>
+        <p>If the kiosk gives you trouble, our night call centre (6 PM – 9 AM) will walk you through it.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>完全没问题。自助机通宵运作，<strong>深夜抵达不收取额外费用。</strong>无需提前联系，直接前来即可入住。</p>
+        <p>若操作遇到困难，可联系夜间客服中心（18:00 至次日 09:00），我们会实时协助。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>問題ございません。キオスクは終夜稼働しており、<strong>深夜のご到着でも追加料金はいただきません。</strong>事前のご連絡なしにそのままご入室いただけます。</p>
+        <p>操作にお困りの際は、夜間コールセンター（18:00〜翌09:00）にご連絡いただければリアルタイムでご案内いたします。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">일찍 도착하거나 늦게 나가고 싶어요</span>
+      <span class="Li" data-l="en">Can I check in early or check out late?</span>
+      <span class="Li" data-l="zh">可以提前入住或延迟退房吗？</span>
+      <span class="Li" data-l="ja">アーリーチェックイン・レイトチェックアウトはできますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>둘 다 가능하며 시간당 요금이 부과됩니다. 당일 객실 상황에 따라 가능 여부가 달라지므로 미리 요청해 주시면 당일 아침에 확인해 알려드립니다.</p>
+        <ul>
+          <li>얼리 체크인 &mdash; 시간당 10,000원</li>
+          <li>레이트 체크아웃 &mdash; 최초 1시간 10,000원, 이후 시간당 20,000원 (최대 오후 3시)</li>
+        </ul>
+        <p>요금은 로비 키오스크에서 결제하시면 됩니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>Both are possible for an hourly fee, subject to availability that day. Ask in advance and we'll confirm on the morning of your stay.</p>
+        <ul>
+          <li>Early check-in &mdash; KRW 10,000 per hour</li>
+          <li>Late check-out &mdash; KRW 10,000 for the first hour, then KRW 20,000 per hour, until 3 PM at the latest</li>
+        </ul>
+        <p>Pay at the lobby kiosk.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>两者均可办理，按小时收费。能否办理需视当日客房情况而定，请提前告知，我们会在当天上午确认后回复。</p>
+        <ul>
+          <li>提前入住 &mdash; 每小时 10,000 韩元</li>
+          <li>延迟退房 &mdash; 首个小时 10,000 韩元，之后每小时 20,000 韩元（最迟至下午3点）</li>
+        </ul>
+        <p>费用请在大堂自助机支付。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>いずれも有料にてご利用いただけます。当日の客室状況により可否が変わりますので、事前にお申し付けいただければ当日朝に確認のうえご連絡いたします。</p>
+        <ul>
+          <li>アーリーチェックイン &mdash; 1時間あたり10,000ウォン</li>
+          <li>レイトチェックアウト &mdash; 最初の1時間10,000ウォン、以降1時間あたり20,000ウォン（最大15:00まで）</li>
+        </ul>
+        <p>お支払いはロビーのキオスクでお願いいたします。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">체크아웃은 어떻게 하나요?</span>
+      <span class="Li" data-l="en">How do I check out?</span>
+      <span class="Li" data-l="zh">如何办理退房？</span>
+      <span class="Li" data-l="ja">チェックアウトはどうすればよいですか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>체크아웃은 오전 11시까지입니다. 1층 계단 옆 <strong>카드 반납함</strong>에 객실 키를 넣어주시면 끝입니다. 프런트에 들르지 않으셔도 됩니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>Check-out is by 11 AM. Drop your room key in the <strong>card return box</strong> by the stairs on the ground floor &mdash; that's it. No need to stop at the front desk.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>退房时间为上午11点前。将客房钥匙投入1楼楼梯旁的<strong>钥匙回收箱</strong>即可完成，无需前往前台。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>チェックアウトは11:00までです。1階階段横の<strong>カード返却ボックス</strong>にルームキーを入れていただければ完了です。フロントにお立ち寄りいただく必要はございません。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">프런트에 사람이 있나요?</span>
+      <span class="Li" data-l="en">Is anyone at the front desk?</span>
+      <span class="Li" data-l="zh">前台有工作人员吗？</span>
+      <span class="Li" data-l="ja">フロントにスタッフはいますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>오전 10시부터 오후 6시까지 직원이 상주합니다. 그 이후에는 키오스크와 야간 콜센터가 이어받습니다.</p>
+        <p>체크인 자체는 시간과 관계없이 키오스크로 하시면 되고, 직원은 도움이 필요할 때를 위해 있습니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>Staff are on site from 10 AM to 6 PM. After that, the kiosk and our night call centre take over.</p>
+        <p>Check-in runs through the kiosk regardless of the hour &mdash; staff are there if you need a hand.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>上午10点至下午6点有工作人员在岗，其后由自助机与夜间客服中心接替。</p>
+        <p>入住手续无论何时都通过自助机办理，工作人员则在您需要协助时提供帮助。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>10:00から18:00までスタッフが常駐しております。それ以降はキオスクと夜間コールセンターが対応いたします。</p>
+        <p>チェックイン自体は時間に関わらずキオスクで行っていただき、スタッフはお手伝いが必要な際のためにおります。</p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= 오시는 길 ================= -->
+<section id="access">
+  <h2>
+    <span class="Li" data-l="ko">오시는 길</span><span class="Li" data-l="en">Getting here</span>
+    <span class="Li" data-l="zh">交通指南</span><span class="Li" data-l="ja">アクセス</span>
+  </h2>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">주소와 가까운 지하철역은?</span>
+      <span class="Li" data-l="en">What's the address and nearest station?</span>
+      <span class="Li" data-l="zh">地址和最近的地铁站在哪里？</span>
+      <span class="Li" data-l="ja">住所と最寄り駅はどこですか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>서울특별시 강남구 강남대로94길 56-4<br>네비게이션·택시 검색: <strong>강남648호텔</strong></p>
+        <ul>
+          <li>지하철 2호선 <strong>역삼역 4번 출구</strong> 도보 5분</li>
+          <li>지하철 2호선·신분당선 <strong>강남역 12번 출구</strong> 도보 7분</li>
+        </ul>
+      </div>
+      <div class="L" data-l="en">
+        <p>56-4 Gangnam-daero 94-gil, Gangnam-gu, Seoul<br>Show a taxi driver: <strong>강남648호텔</strong></p>
+        <ul>
+          <li>5-minute walk from <strong>Yeoksam Station, Exit 4</strong> (Line 2)</li>
+          <li>7-minute walk from <strong>Gangnam Station, Exit 12</strong> (Line 2 / Sinbundang)</li>
+        </ul>
+      </div>
+      <div class="L" data-l="zh">
+        <p>首尔特别市江南区江南大路94街 56-4<br>导航·出租车请出示：<strong>강남648호텔</strong></p>
+        <ul>
+          <li>地铁2号线 <strong>驿三站 4号出口</strong> 步行5分钟</li>
+          <li>地铁2号线·新盆唐线 <strong>江南站 12号出口</strong> 步行7分钟</li>
+        </ul>
+      </div>
+      <div class="L" data-l="ja">
+        <p>ソウル特別市江南区江南大路94キル 56-4<br>ナビ・タクシーでの検索：<strong>강남648호텔</strong></p>
+        <ul>
+          <li>地下鉄2号線 <strong>駅三（ヨクサム）駅 4番出口</strong> 徒歩5分</li>
+          <li>地下鉄2号線・新盆唐線 <strong>江南（カンナム）駅 12番出口</strong> 徒歩7分</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">인천공항에서 어떻게 오나요?</span>
+      <span class="Li" data-l="en">How do I get here from Incheon Airport?</span>
+      <span class="Li" data-l="zh">从仁川机场如何前往？</span>
+      <span class="Li" data-l="ja">仁川空港からの行き方は？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p><strong>공항 리무진 (환승 없음, 짐이 많을 때 추천)</strong><br>6020번 탑승 → 역삼역 하차. 약 70~90분, 17,000원 내외.<br>6009번도 이용하실 수 있으며 강남역에서 내리시면 됩니다.</p>
+        <p><strong>지하철 (가장 저렴)</strong><br>공항철도 → 홍대입구역에서 2호선 환승 → 역삼역 4번 출구. 약 80분, 5,000원 내외.</p>
+        <p><strong>택시</strong><br>약 60~70분, 7만~9만원 (심야 할증 포함).</p>
+      </div>
+      <div class="L" data-l="en">
+        <p><strong>Airport limousine bus (no transfers, easiest with luggage)</strong><br>Take bus 6020 and get off at Yeoksam Station. About 70&ndash;90 min, around KRW 17,000.<br>Bus 6009 also works &mdash; get off at Gangnam Station.</p>
+        <p><strong>Subway (cheapest)</strong><br>AREX, then transfer to Line 2 at Hongik Univ. Station, get off at Yeoksam (Exit 4). About 80 min, around KRW 5,000.</p>
+        <p><strong>Taxi</strong><br>60&ndash;70 min, KRW 70,000&ndash;90,000 including the late-night surcharge.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p><strong>机场大巴（无需换乘，行李多时推荐）</strong><br>乘坐 6020 路，在驿三站下车。约70至90分钟，约17,000韩元。<br>也可乘坐 6009 路，在江南站下车。</p>
+        <p><strong>地铁（最经济）</strong><br>机场铁路 → 弘大入口站换乘2号线 → 驿三站4号出口。约80分钟，约5,000韩元。</p>
+        <p><strong>出租车</strong><br>约60至70分钟，70,000至90,000韩元（含深夜附加费）。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p><strong>空港リムジンバス（乗り換えなし・お荷物が多い方におすすめ）</strong><br>6020番にご乗車、駅三駅で下車。約70〜90分、17,000ウォン前後。<br>6009番もご利用いただけます（江南駅で下車）。</p>
+        <p><strong>地下鉄（最も安価）</strong><br>空港鉄道 → 弘大入口駅で2号線に乗り換え → 駅三駅4番出口。約80分、5,000ウォン前後。</p>
+        <p><strong>タクシー</strong><br>約60〜70分、70,000〜90,000ウォン（深夜割増含む）。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">김포공항·서울역에서는요?</span>
+      <span class="Li" data-l="en">From Gimpo Airport or Seoul Station?</span>
+      <span class="Li" data-l="zh">从金浦机场或首尔站呢？</span>
+      <span class="Li" data-l="ja">金浦空港・ソウル駅からは？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p><strong>김포공항</strong> &mdash; 9호선 급행 → 신논현역 → 신분당선 1정거장 → 강남역. 약 50분.</p>
+        <p><strong>서울역</strong> &mdash; 4호선 → 사당역에서 2호선 환승 → 역삼역. 약 35분.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p><strong>Gimpo Airport</strong> &mdash; Line 9 express to Sinnonhyeon, then one stop on the Sinbundang Line to Gangnam. About 50 min.</p>
+        <p><strong>Seoul Station</strong> &mdash; Line 4 to Sadang, transfer to Line 2, get off at Yeoksam. About 35 min.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p><strong>金浦机场</strong> &mdash; 9号线快车至新论岘站，换乘新盆唐线一站至江南站。约50分钟。</p>
+        <p><strong>首尔站</strong> &mdash; 4号线至舍堂站换乘2号线，在驿三站下车。约35分钟。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p><strong>金浦空港</strong> &mdash; 9号線急行で新論峴駅へ、新盆唐線に乗り換え1駅で江南駅。約50分。</p>
+        <p><strong>ソウル駅</strong> &mdash; 4号線で舎堂駅、2号線に乗り換え駅三駅で下車。約35分。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">주변에 뭐가 있나요?</span>
+      <span class="Li" data-l="en">What's around the hotel?</span>
+      <span class="Li" data-l="zh">酒店周边有什么？</span>
+      <span class="Li" data-l="ja">ホテル周辺には何がありますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>호텔 바로 앞에 24시간 편의점, 다이소, 올리브영, 약국, 병원, 블루보틀, 코인세탁방이 있습니다. 역삼 일대 식당과 카페가 걸어서 닿는 거리에 모여 있고 늦은 밤까지 문을 엽니다.</p>
+        <p>코엑스와 별마당도서관은 지하철로 15분, 잠실은 20분입니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>A 24-hour convenience store, Daiso, Olive Young, a pharmacy, a clinic, Blue Bottle and a coin laundry are all right outside. Yeoksam's restaurants and cafés are within walking distance and stay open late.</p>
+        <p>COEX and the Starfield Library are 15 minutes away by subway; Lotte World Tower about 20.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>酒店门口即有24小时便利店、大创、Olive Young、药店、医院、Blue Bottle 咖啡以及自助洗衣店。驿三一带的餐厅和咖啡馆步行可达，营业至深夜。</p>
+        <p>COEX 与星空图书馆乘地铁约15分钟，蚕室约20分钟。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>ホテルのすぐ前に24時間営業のコンビニ、ダイソー、オリーブヤング、薬局、病院、ブルーボトルコーヒー、コインランドリーがございます。駅三エリアの飲食店やカフェも徒歩圏内にあり、深夜まで営業しています。</p>
+        <p>COEXとピョルマダン図書館は地下鉄で15分、蚕室は約20分です。</p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= 객실 ================= -->
+<section id="room">
+  <h2>
+    <span class="Li" data-l="ko">객실 · 시설</span><span class="Li" data-l="en">Room &amp; facilities</span>
+    <span class="Li" data-l="zh">客房与设施</span><span class="Li" data-l="ja">客室・設備</span>
+  </h2>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">와이파이는 어떻게 연결하나요?</span>
+      <span class="Li" data-l="en">How do I connect to the Wi-Fi?</span>
+      <span class="Li" data-l="zh">如何连接Wi-Fi？</span>
+      <span class="Li" data-l="ja">Wi-Fiの接続方法は？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>객실에 들어가 카드키를 홀더에 꽂고, 홀더 옆 <strong>QR 코드를 휴대폰 카메라로 스캔</strong>하면 자동으로 연결됩니다.</p>
+        <p>수동으로 연결하시려면 객실 안내문에 적힌 네트워크 이름과 비밀번호를 입력하세요.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>Insert the key card into the holder inside your room, then <strong>scan the QR code</strong> next to it with your phone camera. You'll connect automatically.</p>
+        <p>To connect manually, the network name and password are printed on the notice in your room.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>进入客房后将房卡插入取电槽，再用手机相机<strong>扫描槽旁的二维码</strong>，即可自动连接。</p>
+        <p>如需手动连接，请参考客房内告示上标示的网络名称与密码。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>客室に入られましたらカードキーをホルダーに差し込み、その横の<strong>QRコードをスマートフォンのカメラで読み取って</strong>ください。自動的に接続されます。</p>
+        <p>手動で接続される場合は、客室内のご案内に記載のネットワーク名とパスワードをご入力ください。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">에어컨은 어떻게 켜나요?</span>
+      <span class="Li" data-l="en">How do I use the air conditioning?</span>
+      <span class="Li" data-l="zh">空调怎么开？</span>
+      <span class="Li" data-l="ja">エアコンの使い方は？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>객실의 <strong>검은색 통합 리모컨</strong>을 사용합니다. 에어컨 전용 리모컨은 따로 없습니다.</p>
+        <p>리모컨 하단의 빨간색 전원 버튼으로 켜고 끄시면 되고, 냉방·풍량·풍향 버튼은 한국어와 영어로 표기되어 있습니다. 쾌적한 온도 유지를 위해 문과 창문은 닫아 주세요.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>Use the <strong>black universal remote</strong> in your room &mdash; there's no separate AC remote.</p>
+        <p>The red power button at the bottom turns it on and off. Cooling, fan speed and direction are labelled in English and Korean. Keep the door and windows closed to hold the temperature.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>请使用客房内的<strong>黑色综合遥控器</strong>，本酒店没有单独的空调遥控器。</p>
+        <p>按遥控器下方的红色电源键即可开关，制冷、风量、风向按键均标有韩文和英文。为保持室温舒适，请关好门窗。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>客室の<strong>黒い統合リモコン</strong>をご使用ください。エアコン専用のリモコンはございません。</p>
+        <p>リモコン下部の赤い電源ボタンでオン・オフを操作します。冷房・風量・風向のボタンには韓国語と英語の表示がございます。快適な室温を保つため、ドアと窓はお閉めください。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">객실을 못 찾겠어요</span>
+      <span class="Li" data-l="en">I can't find my room</span>
+      <span class="Li" data-l="zh">找不到房间怎么办？</span>
+      <span class="Li" data-l="ja">部屋が見つかりません</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>객실 호실은 <strong>복도 바닥</strong>에 표시되어 있습니다. 문에 붙어 있지 않으니 바닥을 확인해 주세요.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>Room numbers are marked on the <strong>corridor floor</strong>, not on the doors. Look down.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>房号标示在<strong>走廊地面</strong>上，而非门上，请留意脚下。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>客室番号は<strong>廊下の床</strong>に表示されています。ドアには付いておりませんので、床をご確認ください。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">객실에 무엇이 있나요?</span>
+      <span class="Li" data-l="en">What's in the room?</span>
+      <span class="Li" data-l="zh">客房内有哪些设施？</span>
+      <span class="Li" data-l="ja">客室には何がありますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>창이 있는 2인 전용 객실로, 넓은 욕실과 욕조를 갖추고 있습니다. 초고속 와이파이, 개별 조절 에어컨, TV, 헤어드라이어, 세면용품이 준비되어 있습니다.</p>
+        <p>객실과 침대 타입은 당일 운영 상황에 따라 배정되어 미리 지정해 드리기 어렵습니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>A room for two with a window, a generous bathroom and a full bathtub. High-speed Wi-Fi, individually controlled air conditioning, TV, hairdryer and toiletries are provided.</p>
+        <p>Room and bed type are assigned on the day and can't be reserved in advance.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>2人专用客房，设有窗户、宽敞的浴室和浴缸。备有高速Wi-Fi、独立控制空调、电视、吹风机及洗漱用品。</p>
+        <p>客房与床型依当日运营情况分配，恕难事先指定。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>窓のある2名専用の客室で、広いバスルームと浴槽を備えております。高速Wi-Fi、個別調節可能なエアコン、テレビ、ドライヤー、アメニティをご用意しております。</p>
+        <p>客室およびベッドタイプは当日の運営状況により割り当てられるため、事前のご指定は承っておりません。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">로비에서 뭘 쓸 수 있나요?</span>
+      <span class="Li" data-l="en">What can I use in the lobby?</span>
+      <span class="Li" data-l="zh">大堂可以使用什么？</span>
+      <span class="Li" data-l="ja">ロビーでは何が利用できますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>전자레인지 2대와 온수기가 있어 간단한 조리나 컵라면, 차 정도는 해결하실 수 있습니다. 보조 배터리 대여기도 있습니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>Two microwaves and a hot water dispenser &mdash; enough for instant noodles, tea or reheating something. There's also a phone power-bank rental station.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>设有2台微波炉和热水器，可加热食物、泡杯面或冲茶。另有充电宝租借机。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>電子レンジ2台と給湯器がございますので、簡単な温めやカップ麺、お茶などにご利用いただけます。モバイルバッテリーのレンタル機も設置しております。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">취사나 세탁이 되나요?</span>
+      <span class="Li" data-l="en">Is there a kitchen or laundry?</span>
+      <span class="Li" data-l="zh">可以做饭或洗衣吗？</span>
+      <span class="Li" data-l="ja">炊事や洗濯はできますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>일반 호텔 객실이라 취사시설, 싱크대, 세탁기는 없습니다. 레지던스 형태가 아니라는 점을 미리 감안해 주세요.</p>
+        <p>로비에 전자레인지와 온수기가 있고, 도보 거리에 편의점과 코인세탁방, 다이소가 있습니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>This is a standard hotel room, not a serviced residence &mdash; no kitchen, sink or washing machine. Worth knowing if you're staying a while.</p>
+        <p>There are microwaves and a hot water dispenser in the lobby, and a convenience store, coin laundry and Daiso within walking distance.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>本酒店为普通酒店客房，非公寓式住宿，客房内不设炊事设施、水槽和洗衣机，长住前请留意。</p>
+        <p>大堂设有微波炉和热水器，步行距离内有便利店、自助洗衣店和大创。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>一般的なホテル客室のため、炊事設備・シンク・洗濯機はございません。レジデンス型の宿泊施設ではない点をあらかじめご了承ください。</p>
+        <p>ロビーに電子レンジと給湯器がございます。また徒歩圏内にコンビニ、コインランドリー、ダイソーがございます。</p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= 주차 ================= -->
+<section id="parking">
+  <h2>
+    <span class="Li" data-l="ko">주차 · 짐 보관</span><span class="Li" data-l="en">Parking &amp; luggage</span>
+    <span class="Li" data-l="zh">停车与行李寄存</span><span class="Li" data-l="ja">駐車・荷物預かり</span>
+  </h2>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">주차할 수 있나요?</span>
+      <span class="Li" data-l="en">Can I park?</span>
+      <span class="Li" data-l="zh">可以停车吗？</span>
+      <span class="Li" data-l="ja">駐車はできますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>숙박 중 객실당 차량 1대를 무료로 주차하실 수 있습니다. 셀프 주차이며 <strong>후진해서 들어가는 구조</strong>라 여유 있게 진입해 주세요.</p>
+        <p>주차하실 때 <strong>연락처를 꼭 남겨 주세요.</strong> 차를 빼야 할 상황이 생길 수 있습니다.</p>
+        <p>체크인 전이나 체크아웃 후에 주차하시면 시간당 5,000원이 부과됩니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>One car per room parks free during your stay. It's self-park and <strong>you'll need to reverse in</strong>, so take your time.</p>
+        <p>Please <strong>leave a contact number</strong> when you park, in case the car needs moving.</p>
+        <p>Parking before check-in or after check-out is KRW 5,000 per hour.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>住宿期间每间客房可免费停放1辆车。为自助停车，<strong>需倒车入库</strong>，请从容驶入。</p>
+        <p>停车时<strong>请务必留下联系方式</strong>，以便需要挪车时联系您。</p>
+        <p>入住前或退房后停车，按每小时5,000韩元收费。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>ご滞在中、1室につき1台まで無料で駐車いただけます。セルフパーキングで<strong>バックでの入庫</strong>となりますので、ゆとりをもってお進みください。</p>
+        <p>駐車の際は<strong>必ずご連絡先をお残しください。</strong>車の移動をお願いする場合がございます。</p>
+        <p>チェックイン前・チェックアウト後の駐車は1時間あたり5,000ウォンとなります。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">짐을 맡길 수 있나요?</span>
+      <span class="Li" data-l="en">Can I store my luggage?</span>
+      <span class="Li" data-l="zh">可以寄存行李吗？</span>
+      <span class="Li" data-l="ja">荷物を預けられますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>오전 10시부터 오후 7시까지 맡기실 수 있습니다. 체크인 전과 체크아웃 후 모두 가능하니 이동 일정이 있으셔도 편하게 다니실 수 있습니다.</p>
+        <p>다만 현금, 귀중품, 음식, 냉장·냉동 식품, 택배는 보관이 어렵습니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>Yes, from 10 AM to 7 PM &mdash; before check-in and after check-out, so you can move around freely on travel days.</p>
+        <p>We can't store cash, valuables, food, chilled or frozen items, or parcels.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>上午10点至下午7点可寄存。入住前与退房后均可，方便您在赶行程时轻装出行。</p>
+        <p>但现金、贵重物品、食品、冷藏冷冻食品及快递包裹恕不代为保管。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>10:00から19:00までお預かりいたします。チェックイン前・チェックアウト後いずれも可能ですので、移動のご予定がある日も身軽にお出かけいただけます。</p>
+        <p>なお現金・貴重品・食品・冷蔵冷凍品・宅配便のお預かりは承っておりません。</p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= 식사 ================= -->
+<section id="food">
+  <h2>
+    <span class="Li" data-l="ko">식사 · 배달</span><span class="Li" data-l="en">Food &amp; delivery</span>
+    <span class="Li" data-l="zh">餐饮与外卖</span><span class="Li" data-l="ja">食事・デリバリー</span>
+  </h2>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">배달 음식을 시켜도 되나요?</span>
+      <span class="Li" data-l="en">Can I order food delivery?</span>
+      <span class="Li" data-l="zh">可以点外卖吗？</span>
+      <span class="Li" data-l="ja">デリバリーを頼んでもよいですか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>자유롭게 주문하셔도 됩니다. 1층 프런트에 두고 가시도록 요청한 뒤 직접 찾아가시거나, 객실 문 앞까지 받으셔도 됩니다.</p>
+        <p>드신 뒤 음식물 쓰레기와 포장재는 객실 문 밖에 내놓아 주세요.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>Order whatever you like. Couriers can leave it at the front desk for you to collect, or bring it to your door.</p>
+        <p>Afterwards, please leave food waste and packaging outside your room door.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>可自由点餐。您可请配送员放在1楼前台后自行领取，也可让其送至客房门口。</p>
+        <p>用餐后请将厨余和包装放置于客房门外。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>ご自由にご注文いただけます。1階フロントに置いていただき後ほどお受け取りになるか、客室のドア前までお届けいただくことも可能です。</p>
+        <p>お召し上がり後、生ごみと容器は客室のドアの外にお出しください。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">조식이 있나요?</span>
+      <span class="Li" data-l="en">Do you serve breakfast?</span>
+      <span class="Li" data-l="zh">提供早餐吗？</span>
+      <span class="Li" data-l="ja">朝食はありますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>조식은 운영하지 않습니다. 호텔 앞에 24시간 편의점과 카페, 식당이 있어 아침 식사를 해결하기 어렵지 않습니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>We don't serve breakfast. There's a 24-hour convenience store, plus cafés and restaurants, right outside.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>本酒店不提供早餐。门口即有24小时便利店、咖啡馆和餐厅，用早餐十分方便。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>朝食の提供はございません。ホテルの前に24時間営業のコンビニやカフェ、飲食店がございますので、朝食にお困りになることはございません。</p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= 규칙 ================= -->
+<section id="rules">
+  <h2>
+    <span class="Li" data-l="ko">이용 규칙</span><span class="Li" data-l="en">House rules</span>
+    <span class="Li" data-l="zh">住宿规定</span><span class="Li" data-l="ja">ご利用規則</span>
+  </h2>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">몇 명까지 묵을 수 있나요?</span>
+      <span class="Li" data-l="en">How many people can stay?</span>
+      <span class="Li" data-l="zh">最多可入住几人？</span>
+      <span class="Li" data-l="ja">何名まで宿泊できますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>전 객실 최대 2인 전용입니다. 1인 이용은 가능하지만 추가 인원과 외부 방문객은 이용하실 수 없습니다. 가족 객실은 별도로 없습니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>All rooms sleep a maximum of two. One guest is fine, but extra guests and outside visitors aren't permitted. There are no family rooms.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>全部客房最多入住2人。1人入住可以，但不接受加人及外来访客。本酒店不设家庭房。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>全客室2名様までのご利用となります。お1人様でのご利用は可能ですが、人数の追加および外部からのご訪問はお断りしております。ファミリールームのご用意はございません。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">흡연이 가능한 곳이 있나요?</span>
+      <span class="Li" data-l="en">Is there anywhere I can smoke?</span>
+      <span class="Li" data-l="zh">有可以吸烟的地方吗？</span>
+      <span class="Li" data-l="ja">喫煙できる場所はありますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>전 객실과 건물 내 전 구역이 금연입니다. 화재 위험이 있으니 꼭 지켜주세요.</p>
+        <p>흡연이 확인되면 정밀 청소 비용과 다음 고객 피해 보상 비용이 별도로 청구되며, 퇴실 조치될 수 있습니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>Smoking is prohibited in all rooms and throughout the building. It's a fire risk, so please respect this.</p>
+        <p>If smoking is detected, a deep-cleaning fee and compensation for the next guest's inconvenience will be charged, and your stay may be ended.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>全部客房及建筑内所有区域均为禁烟区。存在火灾隐患，敬请配合。</p>
+        <p>一经发现吸烟，将另行收取深度清洁费及对下一位客人的赔偿费用，并可能请您离店。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>全客室および館内全域が禁煙です。火災の危険がございますので、必ずお守りください。</p>
+        <p>喫煙が確認された場合、精密清掃費および次のお客様への被害補償費を別途ご請求し、ご退室いただく場合がございます。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">반려동물과 함께 묵을 수 있나요?</span>
+      <span class="Li" data-l="en">Can I bring a pet?</span>
+      <span class="Li" data-l="zh">可以携带宠物吗？</span>
+      <span class="Li" data-l="ja">ペットと一緒に泊まれますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko"><p>반려동물 동반은 어렵습니다.</p></div>
+      <div class="L" data-l="en"><p>We're not able to accommodate pets.</p></div>
+      <div class="L" data-l="zh"><p>本酒店不接受携带宠物入住。</p></div>
+      <div class="L" data-l="ja"><p>ペットの同伴はお受けしておりません。</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">밤에 조용히 해야 하나요?</span>
+      <span class="Li" data-l="en">Are there quiet hours?</span>
+      <span class="Li" data-l="zh">夜间需要保持安静吗？</span>
+      <span class="Li" data-l="ja">夜間の静粛時間はありますか？</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>밤 10시 이후에는 다른 객실에 소리가 들리지 않도록 협조해 주세요. 파티나 행사, 상업적 촬영은 어렵습니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>Please keep noise down after 10 PM out of consideration for other rooms. No parties, events or commercial photography.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>晚上10点后请避免发出影响其他客房的声响。恕不允许举办派对、活动及商业拍摄。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>22時以降は他のお部屋に音が響かないようご配慮ください。パーティーやイベント、商業撮影はご遠慮いただいております。</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="Li" data-l="ko">예약을 변경하거나 취소하고 싶어요</span>
+      <span class="Li" data-l="en">I need to change or cancel my booking</span>
+      <span class="Li" data-l="zh">想要变更或取消预订</span>
+      <span class="Li" data-l="ja">予約を変更・キャンセルしたいのですが</span>
+    </summary>
+    <div class="answer">
+      <div class="L" data-l="ko">
+        <p>예약하신 플랫폼의 취소 정책이 적용됩니다. 해당 플랫폼에서 직접 요청하시거나, 메시지로 문의해 주시면 안내해 드리겠습니다.</p>
+      </div>
+      <div class="L" data-l="en">
+        <p>The cancellation policy of the platform you booked through applies. Request the change there, or message us and we'll guide you.</p>
+      </div>
+      <div class="L" data-l="zh">
+        <p>适用您预订平台的取消政策。请在该平台直接申请，或通过消息联系我们，我们会为您说明。</p>
+      </div>
+      <div class="L" data-l="ja">
+        <p>ご予約いただいたサイトのキャンセルポリシーが適用されます。当該サイトから直接お手続きいただくか、メッセージでお問い合わせください。</p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= 문의 ================= -->
+<section id="contact">
+  <h2>
+    <span class="Li" data-l="ko">문의</span><span class="Li" data-l="en">Contact</span>
+    <span class="Li" data-l="zh">联系我们</span><span class="Li" data-l="ja">お問い合わせ</span>
+  </h2>
+  <div class="contact">
+    <h3>
+      <span class="Li" data-l="ko">언제 어디로 연락하면 되나요</span>
+      <span class="Li" data-l="en">Who to reach, and when</span>
+      <span class="Li" data-l="zh">何时联系谁</span>
+      <span class="Li" data-l="ja">いつ・どこへご連絡いただくか</span>
+    </h3>
+    <div class="rows">
+      <div class="row">
+        <b>
+          <span class="Li" data-l="ko">예약 메시지</span><span class="Li" data-l="en">Booking messages</span>
+          <span class="Li" data-l="zh">预订平台消息</span><span class="Li" data-l="ja">予約サイトのメッセージ</span>
+        </b>
+        <span class="Li" data-l="ko">24시간 접수 · 가능한 한 빠르게 답변드립니다</span>
+        <span class="Li" data-l="en">Any time &mdash; we reply as quickly as we can</span>
+        <span class="Li" data-l="zh">24小时受理，我们会尽快回复</span>
+        <span class="Li" data-l="ja">24時間受付・できる限り早くご返信いたします</span>
+      </div>
+      <div class="row">
+        <b>
+          <span class="Li" data-l="ko">프런트</span><span class="Li" data-l="en">Front desk</span>
+          <span class="Li" data-l="zh">前台</span><span class="Li" data-l="ja">フロント</span>
+        </b>
+        <span class="Li" data-l="ko">오전 10시 ~ 오후 6시 · 직원 상주</span>
+        <span class="Li" data-l="en">10 AM &ndash; 6 PM, staffed in person</span>
+        <span class="Li" data-l="zh">10:00 至 18:00，工作人员在岗</span>
+        <span class="Li" data-l="ja">10:00〜18:00・スタッフ常駐</span>
+      </div>
+      <div class="row">
+        <b>
+          <span class="Li" data-l="ko">야간 콜센터</span><span class="Li" data-l="en">Night call centre</span>
+          <span class="Li" data-l="zh">夜间客服中心</span><span class="Li" data-l="ja">夜間コールセンター</span>
+        </b>
+        <span class="Li" data-l="ko">오후 6시 ~ 다음날 오전 9시 · 실시간 지원</span>
+        <span class="Li" data-l="en">6 PM &ndash; 9 AM, real-time assistance</span>
+        <span class="Li" data-l="zh">18:00 至次日 09:00，实时协助</span>
+        <span class="Li" data-l="ja">18:00〜翌09:00・リアルタイム対応</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="review Lp" data-l="ko">
+    <div class="rv-label">작은 부탁 하나</div>
+    <div class="rv-lead">편안한 시간 보내셨다면, 잠시 시간을 내어 후기를 남겨주시길 부탁드립니다.</div>
+    <div class="rv-body">저희 같은 규모의 호텔에는 후기 한 줄이 정말 큰 힘이 됩니다. 다음 손님이 안심하고 예약할 수 있는 이유가 되고, 저희가 더 나아질 수 있는 기준이 되기도 합니다.<br>혹시 머무시는 동안 <strong>아쉬운 점이 있으셨다면 먼저 말씀해 주세요.</strong> 바로 살펴보고 해결해 드리겠습니다.</div>
+  </div>
+  <div class="review Lp" data-l="en">
+    <div class="rv-label">A SMALL FAVOUR</div>
+    <div class="rv-lead">If you leave rested, we'd be truly grateful if you could spare a moment to write a review.</div>
+    <div class="rv-body">For a hotel our size, a single honest review makes a real difference. It's what gives the next guest the confidence to book, and it's how we learn where to do better.<br>And if anything fell short during your stay, <strong>please tell us first.</strong> We'll look into it and put it right.</div>
+  </div>
+  <div class="review Lp" data-l="zh">
+    <div class="rv-label">一个小小的请求</div>
+    <div class="rv-lead">若您住得舒心，恳请拨冗为我们留下一段评价。</div>
+    <div class="rv-body">对我们这样规模的酒店而言，一条真诚的评价意义非凡。它能让下一位客人安心预订，也是我们不断改进的依据。<br>入住期间若有任何不便之处，<strong>请务必先告诉我们</strong>，我们会立即查看并妥善处理。</div>
+  </div>
+  <div class="review Lp" data-l="ja">
+    <div class="rv-label">ささやかなお願い</div>
+    <div class="rv-lead">心地よくお過ごしいただけましたら、お時間のある時に口コミをお寄せいただけますと幸いです。</div>
+    <div class="rv-body">私どものような規模のホテルにとって、一つの率直な口コミが大きな支えとなります。次のお客様が安心してご予約いただける理由となり、私どもが改善していくための指針にもなります。<br>ご滞在中に行き届かない点がございましたら、<strong>どうぞ先にお知らせください。</strong>すぐに確認し、対応いたします。</div>
+  </div>
+  <p class="Lp" data-l="ko">강남648호텔 · 서울특별시 강남구 강남대로94길 56-4 · 일반숙박업 제0228호</p>
+  <p class="Lp" data-l="en">G648 Hotel · 56-4 Gangnam-daero 94-gil, Gangnam-gu, Seoul</p>
+  <p class="Lp" data-l="zh">江南648酒店 · 首尔特别市江南区江南大路94街 56-4</p>
+  <p class="Lp" data-l="ja">江南648ホテル · ソウル特別市江南区江南大路94キル 56-4</p>
+  <p class="Lp" data-l="ko">편하게 들어오시고, 푹 쉬세요.</p>
+  <p class="Lp" data-l="en">Come in easily, and rest properly.</p>
+  <p class="Lp" data-l="zh">轻松入住，好好休息。</p>
+  <p class="Lp" data-l="ja">気軽にお入りになって、ゆっくりお休みください。</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var LANGS = ['ko','en','zh','ja'];
+  var buttons = document.querySelectorAll('.util button');
+  function setLang(lang){
+    if (LANGS.indexOf(lang) === -1) lang = 'ko';
+    LANGS.forEach(function(l){ document.body.classList.remove('l-' + l); });
+    document.body.classList.add('l-' + lang);
+    document.documentElement.lang = lang;
+    buttons.forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+    });
+    try { localStorage.setItem('g648-lang', lang); } catch(e) {}
+  }
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.dataset.lang); });
+  });
+  var saved = null;
+  try { saved = localStorage.getItem('g648-lang'); } catch(e) {}
+  if (saved) {
+    setLang(saved);
+  } else {
+    var nav = (navigator.language || 'ko').toLowerCase();
+    if (nav.indexOf('zh') === 0) setLang('zh');
+    else if (nav.indexOf('ja') === 0) setLang('ja');
+    else if (nav.indexOf('ko') === 0) setLang('ko');
+    else setLang('en');
+  }
+})();
+</script>
+</body>
+</html>
